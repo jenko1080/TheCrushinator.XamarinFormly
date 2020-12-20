@@ -7,9 +7,7 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="XamarinFormly" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <StackLayout x:Name="StackLayout">
-
-        </StackLayout>
+        <StackLayout x:Name="StackLayout" />
     </StackLayout>
 
 </ContentPage>
