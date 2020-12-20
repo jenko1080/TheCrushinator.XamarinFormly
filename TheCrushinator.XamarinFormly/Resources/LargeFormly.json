@@ -1,0 +1,180 @@
+[
+  {
+    "key": "Input",
+    "type": "input",
+    "templateOptions": {
+      "label": "Input",
+      "placeholder": "Placeholder",
+      "description": "Description",
+      "required": true
+    }
+  },
+  {
+    "key": "Textarea",
+    "type": "textarea",
+    "templateOptions": {
+      "label": "Textarea",
+      "placeholder": "Placeholder",
+      "description": "Description",
+      "required": true
+    }
+  },
+  {
+    "key": "Checkbox",
+    "type": "checkbox",
+    "templateOptions": {
+      "label": "Accept terms",
+      "description": "In order to proceed, please accept terms",
+      "pattern": "true",
+      "required": true
+    },
+    "validation": {
+      "messages": {
+        "pattern": "Please accept the terms"
+      }
+    }
+  },
+  {
+    "key": "Radio",
+    "type": "radio",
+    "templateOptions": {
+      "label": "Radio",
+      "placeholder": "Placeholder",
+      "description": "Description",
+      "required": true,
+      "options": [
+        { "value": 1, "label": "Option 1" },
+        { "value": 2, "label": "Option 2" },
+        { "value": 3, "label": "Option 3" },
+        { "value": 4, "label": "Option 4", "disabled": true }
+      ]
+    }
+  },
+  {
+    "key": "Select",
+    "type": "select",
+    "templateOptions": {
+      "label": "Select",
+      "placeholder": "Placeholder",
+      "description": "Description",
+      "required": true,
+      "options": [
+        { "value": 1, "label": "Option 1" },
+        { "value": 2, "label": "Option 2" },
+        { "value": 3, "label": "Option 3" },
+        { "value": 4, "label": "Option 4", "disabled": true }
+      ]
+    }
+  },
+  {
+    "key": "text",
+    "type": "input",
+    "templateOptions": {
+      "label": "Text",
+      "placeholder": "Formly is terrific!",
+      "required": true
+    }
+  },
+  {
+    "key": "nested.story",
+    "type": "textarea",
+    "templateOptions": {
+      "label": "Some sweet story",
+      "placeholder": "It allows you to build and maintain your forms with the ease of JavaScript :-)",
+      "description": ""
+    },
+    "expressionProperties": {}
+  },
+  {
+    "key": "awesome",
+    "type": "checkbox",
+    "templateOptions": { "label": "" },
+    "expressionProperties": {}
+  },
+  {
+    "key": "whyNot",
+    "type": "textarea",
+    "expressionProperties": {},
+    "hideExpression": "model.awesome",
+    "templateOptions": {
+      "label": "Why Not?",
+      "placeholder": "Type in here... I dare you"
+    }
+  },
+  {
+    "key": "custom",
+    "type": "custom",
+    "templateOptions": {
+      "label": "Custom inlined"
+    }
+  },
+  {
+    "key": "name",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name (required)",
+      "required": true
+    }
+  },
+  {
+    "key": "age",
+    "type": "input",
+    "templateOptions": {
+      "label": "Age (min= 18, max= 40)",
+      "type": "number",
+      "min": 18,
+      "max": 40,
+      "required": true
+    }
+  },
+  {
+    "key": "password",
+    "type": "input",
+    "templateOptions": {
+      "label": "Password (minLength = 6)",
+      "type": "password",
+      "required": true,
+      "minLength": 6
+    }
+  },
+  {
+    "key": "comment",
+    "type": "textarea",
+    "templateOptions": {
+      "label": "Comment (maxLength = 100)",
+      "required": true,
+      "maxLength": 100,
+      "rows": 5
+    }
+  },
+  {
+    "key": "ip",
+    "type": "input",
+    "templateOptions": {
+      "label": "IP Address (pattern = /(d{1,3}.){3}d{1,3}/)",
+      "pattern": "/(\\d{1,3}\\.){3}\\d{1,3}/",
+      "required": true
+    },
+    "validation": {}
+  },
+  {
+    "key": "username1",
+    "type": "input",
+    "templateOptions": {
+      "label": "Username (validated using `Promise`)",
+      "placeholder": "Username",
+      "required": true
+    },
+    "asyncValidators": {}
+  },
+  {
+    "key": "username2",
+    "type": "input",
+    "templateOptions": {
+      "label": "Username (validated using `Observable`)",
+      "placeholder": "Username",
+      "required": true
+    },
+    "asyncValidators": {}
+  }
+]
