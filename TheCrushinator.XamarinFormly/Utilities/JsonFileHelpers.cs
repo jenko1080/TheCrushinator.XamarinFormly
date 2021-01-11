@@ -1,14 +1,13 @@
 ﻿using System;
-using Newtonsoft.Json;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json;
 
 namespace TheCrushinator.XamarinFormly.Utilities
 {
     /// <summary>
     /// JSON reading and writing helpers
-    /// TODO: Use System.Text.Json when available: https://github.com/dotnet/runtime/issues/31326
     /// </summary>
     public static class JsonResourceHelpers
     {
@@ -16,7 +15,7 @@ namespace TheCrushinator.XamarinFormly.Utilities
         {
             String contents = ResourceLoader.GetEmbeddedResourceString(System.Reflection.Assembly.GetCallingAssembly(), fileName);
 
-			var resource = JsonConvert.DeserializeObject<T>(contents);
+			var resource = JsonSerializer.Deserialize<T>(contents);
 
             return resource;
         }
